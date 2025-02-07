@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content  %}
+    <div class="container">
+        <h1>{{ title }}</h1>
+        <h3>Это сайт посвящен самому популярному виду спорта в мире - футболу</h3>
+        <p>Здесь вы найдете небольшую информацию, а также сможете добавить в список свой любиый клуб или узнать про уже
+        добавленые клубы на странице "Голосование"</p>
+        <a href="{% url 'about' %}"><button class="btn btn-warning">На страницу "Про футбол"</button></a><br>
+        <img src="{% static 'main/img/san-siro.jpg' %}" alt="football" class="football-image-1" width="400" margin="100">
+        <img src="{% static 'main/img/football-fight.jpg' %}" alt="football" class="football-image-2" width="400" margin="100">
+        </div>
+
+{% endblock %}
