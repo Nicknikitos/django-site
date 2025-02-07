@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Голосование за клуб{% endblock %}
+
+{% block content  %}
+    <div class="features">
+        <h1>Голосование за клуб</h1>
+        <p1>Выбери свой любимый клуб или тот, который поддерживаешь больше из представленных, и узнай о нем больше</p1>
+        {% for el in vote %}
+        <div class="alert alert-dark">
+            <h3>{{ el.title }}</h3>
+            <p2>{{ el.anons }}</p2>
+            <div class="btn-container">
+            <a href="{% url 'vote-detail' el.id %}" class="btn btn-secondary">Читать подробнее</a>
+                </div>
+            <a href=""></a><br>
+            <a href=""></a><br>
+            <a href=""></a><br>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
